@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Version 1 - Jenkins Rollback</title>
+    <style>
+        /* Full-page gradient background */
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: white;
+        }
+
+        /* Fancy container */
+        .version-box {
+            text-align: center;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 60px 80px;
+            border-radius: 25px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+            animation: pulse 2s infinite;
+        }
+
+        /* Main text */
+        h1 {
+            font-size: 3em;
+            margin: 0;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+        }
+
+        /* Subtext animation */
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        /* Animated glowing border */
+        .version-box::before {
+            content: '';
+            position: absolute;
+            top: -5px; left: -5px; right: -5px; bottom: -5px;
+            border-radius: 30px;
+            background: linear-gradient(45deg, #ff6ec4, #7873f5, #42e695, #ff6ec4);
+            background-size: 400% 400%;
+            z-index: -1;
+            animation: gradientBorder 10s ease infinite;
+        }
+
+        @keyframes gradientBorder {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+    </style>
+</head>
+<body>
+    <div class="version-box">
+        <h1>This is Version 1</h1>
+    </div>
+</body>
+</html>
